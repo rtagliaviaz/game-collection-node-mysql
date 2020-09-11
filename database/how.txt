@@ -1,0 +1,41 @@
+HOW TO MYSQL
+
+1- OPEN XAMPP
+2- CREATE SQL FILE INSIDE THE PROYECT(NOT NECESSARY)
+3- CONSOLE mysql -u root -p | Enter Password: nopass
+4- ADD THE LINES FROM THE SQL FILE
+
+how to look the db
+1-mysql -u root -p | Enter Password: nopass
+2-use database_games //(database name)
+3-show tables // display the tables names
+4-SELECT * FROM  games;// select all records from "table name"
+
+
+Add to mysql -> INSERT INTO games set ?;
+read -> SELECT * FROM games;
+read -> SELECT * FROM games WHERE id = ?;
+delete -> 'DELETE FROM games WHERE id = ?';
+
+
+how to connect-flash
+1- require connect-flash in index.js
+2- use it as a middleware
+3-use it in the desired route, require it in the route (name, message)
+4- in the hbs use the flash name, and style the message
+
+
+how to passport
+1- /lib/passport.js
+  -require passport and passport-local //we are doing a localStrategy it means username, password 
+2- require passport  and the lib file in index.js
+  //middleware
+  - app.use(passport.initialize());
+  -app.use(passport.session());
+3- require passport in the route and set it up
+
+
+TODO
+-reset password option
+-deploy to heroku with mysql
+-

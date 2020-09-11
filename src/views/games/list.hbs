@@ -1,0 +1,30 @@
+<div class="container p-4">
+  <div class="row">
+    {{#each games}}
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-body">
+              <h3 class="card-title text-uppercase">
+                {{title}}
+              </h3>
+              <p>Genre: {{genre}}</p>
+              <p>{{description}}</p>
+              <p>{{timeago created_at}}</p>
+              <a href="/games/edit/{{id}}" class="btn btn-primary">Edit</a>
+              {{!--/games/delete/{{id}} --> envia el id  del elemento seleccionado a la ruta  
+              el id viene del objeto que se esta manejando en el POST--}}
+              <a href="/games/delete/{{id}}" class="btn btn-danger">Delete</a>
+            </a>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>There are not games saved yet.</p>
+          <a href="/games/add">Add one!</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

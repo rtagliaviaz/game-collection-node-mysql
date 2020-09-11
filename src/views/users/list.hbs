@@ -1,0 +1,32 @@
+<div class="container p-4">
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          {{!-- <th scope="col">#</th> --}}
+          <th scope="col">Full Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">ID</th>
+          <th>Delete</th>
+          <th>Edit</th>
+          {{!-- <th scope="col">Password</th> --}}
+        </tr>
+      </thead>
+
+      {{#each users}}
+
+        <tbody>
+          <tr>
+          {{!-- <th scope="row">1</th> --}}
+          <td>{{fullname}}</td>
+          <td>{{username}}</td>
+          <td>{{id}}</td>
+          <td><a href="/users/delete/{{id}}" class="btn btn-danger">X</a></td>
+          <td><a href="/users/edit/{{id}}" class="btn btn-primary">Edit</a></td>
+          {{!-- <td>{{password}}</td> --}}
+          </tr>
+          
+      {{/each}}
+    </table>
+  </div>
+</div>
