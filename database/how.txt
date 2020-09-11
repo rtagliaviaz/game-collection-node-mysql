@@ -39,3 +39,22 @@ TODO
 -reset password option
 -deploy to heroku with mysql
 -
+
+
+Deploy to Heroku
+1- login to Heroku
+2- git init
+3- git add .
+4- git commit -m 'first'
+5- heroku create app-name or heroku create for (random name)
+6- git push heroku master
+
+configure MYSQL on heroku
+//setup cleardb
+1- heroku addons:create cleardb:ignite
+2- heroku config | grep CLEARDB_DATABASE_URL
+If you get the error on Window Os:
+'grep' is not recognized as an internal or external command, operable program or batch file.
+You can use this command instead:
+heroku config | findstr CLEARDB_DATABASE_URL
+3- 
