@@ -6,7 +6,7 @@ module.exports = {
   //   database: 'database_games'
   // }
   database: {
-    host: 'localhost',
+    host: 'remotemysql.com',
     user: '3CAlTeQrpb',
     password: 'VJmprbt29h',
     database: '3CAlTeQrpb'
